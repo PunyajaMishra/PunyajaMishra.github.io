@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 body {
-  color: #d0b8d0;
+  background-color: #d0b8d0;
   padding: 0;
   margin: 0;
   position: relative;
@@ -9,10 +9,13 @@ body {
   overflow: hidden;
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
+  overflow-y: scroll;
 }
 
 /*
-########## NAV Side Bar ##########
+#################################################
+            NAVIGATION SIDE BAR  
+#################################################
 */
 .container {
   display: flex;
@@ -120,7 +123,9 @@ nav ul {
 }
 
 /*
-########## Header ##########
+#################################################
+                  HEADER  
+#################################################
 */
 header {
   background-image: url(bkg-img.jpeg);
@@ -129,6 +134,8 @@ header {
   width: 100%;
   text-align: center;
   color: black;
+  margin-right: 5%;
+  margin-top: 2%;
 }
 
 .header-content-text {
@@ -172,7 +179,69 @@ header {
 }
 
 /*
-########## NAV Side Bar - Smaller screens ##########
+#################################################
+                  ABOUT SECTION
+#################################################
+*/
+
+.about {
+  display: flex;
+  flex-direction: column;
+  background-color: #d0b8d0;
+  margin-left: 5%;
+  padding: 0 5%;
+  margin-top: 2%;
+  height: 100vh;
+  align-items: center;
+}
+
+.about h1 {
+  font-size: 2.5em;
+  color: black;
+  font-family: "Georgia", sans-serif;
+}
+
+.about p {
+  display: block;
+  text-align: center;
+  font-size: 1.5em;
+  font-family: "Georgia", sans-serif;
+  color: black;
+}
+
+.about a {
+  text-decoration: none;
+  color: rgb(58, 53, 53);
+  font-style: italic;
+}
+
+/* CSS For underline hover effect */
+.underlineHoverEffect {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 0.25rem;
+  cursor: pointer;
+}
+.underlineHoverEffect::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.35s ease-out;
+}
+.underlineHoverEffect:hover::before {
+  width: 100%;
+}
+/* End of hover effect */
+
+/*
+#################################################
+          SMALLER SCREENS (TABLETS)  
+#################################################
 */
 @media (max-width: 960px) {
   header {
@@ -223,11 +292,39 @@ header {
   .header-content-right p {
     font-size: 1em;
   }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    background-color: #d0b8d0;
+    margin-left: 10%;
+    padding: 2% 5%;
+    height: 100vh;
+    align-items: center;
+    height: auto;
+  }
+
+  .about h1 {
+    font-size: 1.5em;
+    color: black;
+    font-family: "Georgia", sans-serif;
+  }
+
+  .about p {
+    display: block;
+    text-align: center;
+    font-size: 0.5em;
+    font-family: "Georgia", sans-serif;
+    color: black;
+  }
 }
 
 /*
-########## NAV Side Bar - Smaller screens ##########
+#################################################
+              SMALLER SCREENS
+#################################################
 */
+
 @media (max-width: 844px) {
   .container .sidebar {
     width: 5%;
@@ -303,7 +400,38 @@ header {
     padding: 0.5%;
     font-size: 1em;
   }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    background-color: #d0b8d0;
+    margin-left: 10%;
+    padding: 2% 5%;
+    height: 100vh;
+    align-items: center;
+    height: auto;
+  }
+
+  .about h1 {
+    font-size: 1.5em;
+    color: black;
+    font-family: "Georgia", sans-serif;
+  }
+
+  .about p {
+    display: block;
+    text-align: center;
+    font-size: 0.5em;
+    font-family: "Georgia", sans-serif;
+    color: black;
+  }
 }
+
+/*
+#################################################
+            SMALLER SCREENS - PHONE
+#################################################
+*/
 
 @media (max-width: 390px) {
   .container .sidebar {
