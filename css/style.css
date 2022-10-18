@@ -303,6 +303,7 @@ header {
 }
 .project-brief p {
   font-size: 1.2em;
+  padding: 0.5%;
 }
 
 /*
@@ -314,9 +315,10 @@ header {
 .contact {
   display: flex;
   margin-left: 5%;
-  align-items: center;
   padding: 1%;
   height: 50vh;
+  width: 100vw;
+  align-items: center;
 }
 
 .contact ul {
