@@ -10,12 +10,12 @@ menu.addEventListener("click", function () {
  */
 function expandSidebar() {
   document.querySelector("body").classList.toggle("short");
-  let keepSidebar = document.querySelectorAll("body.short");
+  /* let keepSidebar = document.querySelectorAll("body.short");
   if (keepSidebar.length === 1) {
     localStorage.setItem("keepSidebar", "true");
   } else {
     localStorage.removeItem("keepSidebar");
-  }
+  }*/
 }
 
 /**
